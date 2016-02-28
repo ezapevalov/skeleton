@@ -114,6 +114,12 @@ class indexController implements iHandler {
                 exit;
             }
 
+            include(APP_ROOT . '/assets/SimpleImage.php');
+            $image = new SimpleImage();
+            $image->load(APP_ROOT."/uploads/temp/" . $image_temp_name. ".$ext");
+            $image->resize(320, 240);
+            $image->save(APP_ROOT."/uploads/temp/" . $image_temp_name. ".$ext");
+
             $image_url = "/uploads/temp/" . $image_temp_name. ".$ext";
             $result = ['done'=>'yes', 'image_url'=>$image_url];
 

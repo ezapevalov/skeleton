@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     $(order_by_toggle).click(function(event) {
         event.preventDefault();
-        
+
         var order_by = $(this).attr('order_by');
         var order_type = 'ASC';
         var icon = $(this).find("i");
