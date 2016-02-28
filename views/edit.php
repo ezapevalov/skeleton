@@ -1,8 +1,9 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/admin">Отзывы</a>
             <a class="blog-nav-item" href="/">Главная</a>
-            <a class="blog-nav-item" href="/auth/logout">Выход</a>
+            <a class="blog-nav-item pull-right" href="/auth/logout">Выход</a>
         </nav>
     </div>
 </div>

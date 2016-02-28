@@ -40,9 +40,16 @@ class adminController implements iHandler {
         $app->addStyle("/plugins/bootstrap-switch/bootstrap-switch.min.css");
         $app->addStyle("/assets/css/admin/index.css");
 
-        $comments = $app->db->getAll("SELECT * FROM comments");
+        $order_by = isset($_GET['order_by']) ? $_GET['order_by'] : 'date';
+        $order_type = isset($_GET['order_type']) ? $_GET['order_type'] : 'ASC';
 
-        $this->render('admin', $app, ['comments'=>$comments]);
+        $comments = $app->db->getAll("SELECT * FROM comments ORDER BY $order_by $order_type");
+
+        $data['comments'] = $comments;
+        $data['order_by'] = $order_by;
+        $data['order_type'] = $order_type;
+
+        $this->render('admin', $app, $data);
     }
 
     public function actionToggleComment(&$app) {

@@ -8,7 +8,9 @@ $(document).ready(function() {
     $("#preview_button").click(function( event ) {
         event.preventDefault();
 
-        formIsValid();
+        if ( !formIsValid() ) {
+            return false;
+        }
 
         $.get('/index/check_email_availability?email='+$("#user_email").val(), function(result) {
             if ( result == 'taken' ) {

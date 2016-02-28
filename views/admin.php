@@ -1,8 +1,9 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
+            <a class="blog-nav-item active" href="/">Отзывы</a>
             <a class="blog-nav-item" href="/">Главная</a>
-            <a class="blog-nav-item" href="/auth/logout">Выход</a>
+            <a class="blog-nav-item pull-right" href="/auth/logout">Выход</a>
         </nav>
     </div>
 </div>
@@ -14,11 +15,46 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>ID</th>
-                <th id="date">Дата</th>
+                <th>
+                    ID
+                </th>
+                <th id="date">
+                    <a href="#" class="order_by_toggle" order_by="date">
+                        Дата
+                        <? if ( $vars['order_by'] == 'date' ): ?>
+                            <? if ( $vars['order_type'] == 'ASC' ): ?>
+                                <i class="glyphicon glyphicon-arrow-up"></i>
+                            <? else: ?>
+                                <i class="glyphicon glyphicon-arrow-down"></i>
+                            <? endif ?>
+                        <? endif?>
+                    </a>
+                </th>
                 <th>Иконка</th>
-                <th>Имя</th>
-                <th>Email</th>
+                <th>
+                    <a href="#" class="order_by_toggle" order_by="name">
+                        Имя
+                        <? if ( $vars['order_by'] == 'name' ): ?>
+                            <? if ( $vars['order_type'] == 'ASC' ): ?>
+                                <i class="glyphicon glyphicon-arrow-up"></i>
+                            <? else: ?>
+                                <i class="glyphicon glyphicon-arrow-down"></i>
+                            <? endif ?>
+                        <? endif?>
+                    </a>
+                </th>
+                <th>
+                    <a href="#" class="order_by_toggle" order_by="email">
+                        Email
+                        <? if ( $vars['order_by'] == 'email' ): ?>
+                            <? if ( $vars['order_type'] == 'ASC' ): ?>
+                                <i class="glyphicon glyphicon-arrow-up"></i>
+                            <? else: ?>
+                                <i class="glyphicon glyphicon-arrow-down"></i>
+                            <? endif ?>
+                        <? endif?>
+                    </a>
+                </th>
                 <th>Комментарий</th>
                 <th>Активен</th>
             </tr>
