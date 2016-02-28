@@ -36,7 +36,9 @@ $(document).ready(function() {
         });
     });
 
-    $("#back_from_preview_button").click(function() {
+    $("#back_from_preview_button").click(function(event) {
+        event.preventDefault();
+        
         $("#preview, #deactivate_preview_block").hide();
         $("form, #activate_preview_block, #lure").fadeIn('slow');
     });
