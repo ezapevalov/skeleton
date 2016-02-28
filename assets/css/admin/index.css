@@ -1,0 +1,16 @@
+body {
+    font-family: "Verdana", "sans-serif";
+}
+
+table {
+    font-size: 12px;
+}
+
+table img {
+    max-width: 60px;
+    max-height: 46px;
+}
+
+#date {
+    width: 130px;
+}
