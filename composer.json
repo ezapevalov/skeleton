@@ -8,11 +8,11 @@
             "email": "ez@sybim.com"
         }
     ],
-    "minimum-stability": "stable",
+    //"minimum-stability": "stable",
     "require": {
-        "colshrapnel/safemysql": "^1.0",
-        "components/jquery": "^2.2",
-        "components/jqueryui": "^1.11",
-        "twbs/bootstrap": "^3.3"
+        //"colshrapnel/safemysql": "^1.0",
+        //"components/jquery": "^2.2",
+        //"components/jqueryui": "^1.11",
+        //"twbs/bootstrap": "^3.3"
     }
 }
