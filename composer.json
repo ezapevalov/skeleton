@@ -8,5 +8,11 @@
             "email": "ez@sybim.com"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "colshrapnel/safemysql": "^1.0",
+        "components/jquery": "^2.2",
+        "components/jqueryui": "^1.11",
+        "twbs/bootstrap": "^3.3"
+    }
 }
