@@ -1,4 +1,14 @@
 {
+    "name": "ez/skeleton",
+    "description": "simple php-framework with no magic",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Eugene Zapevalov",
+            "email": "ez@sybim.com"
+        }
+    ],
+    "minimum-stability": "dev",
     "require": {
         "colshrapnel/safemysql": "^1.0",
         "components/jquery": "^2.2",
